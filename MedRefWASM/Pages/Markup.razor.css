@@ -1,0 +1,57 @@
+#tablecontainer {
+    height: 75%;
+    overflow-x: scroll;
+    overflow-y: visible;
+}
+
+
+.shadow {
+    box-shadow: 0px 100px 2px #ff0000;
+}
+
+
+.drugselection {
+    background-color: #e2e3e5;
+    border-color: #d3d6d8;
+    border-radius: 0.25rem;
+    border: 1px solid #00000021;
+    padding: 1rem 1rem;
+    margin: 0rem 0rem 1rem 0rem
+}
+
+
+#attributesTable {
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+}
+
+.tablebox {
+    height: 50vh;
+    overflow-x: scroll;
+}
+
+#attributesTable tr:nth-child(even) {
+    background-color: #E8E8E8;
+}
+
+#attributesTable tr:hover {
+    background-color: #ddd;
+}
+
+#attributesTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#attributesTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #0D5D7C;
+    color: white;
+    border: 1px solid #ddd;
+    padding: 8px;
+    position: sticky;
+    top: 0;
+}

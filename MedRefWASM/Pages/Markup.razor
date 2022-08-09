@@ -1,0 +1,74 @@
+﻿@page "/markup"
+@using MedRefWASM.Services
+@using MedRefWASM.Classes
+
+@inject MedicationItemService MedItemService
+
+<!--This is the code structure that will be used to display our drugs that we want to select-->
+<div class="drugselection">
+    <span>
+        Medication: <input @bind="medicationSelText"/>
+    </span>
+    <span>
+        <button>Select</button>
+    </span>
+</div>
+
+<div class="selecteddrugs">
+    <ul>
+        <li>example</li>
+        <li>example 2</li>
+    </ul>
+</div>
+
+
+<!--This is the general code structure I will use to display the table-->
+<div class="tablebox">
+    <table id="attributesTable">
+        <thead>
+            <tr>
+                <th>Medication</th>
+                <th>Renal Adjustment</th>
+                <th>Dialysis Adjustment</th>
+                <th>Hepatic Adjustment</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var med in items)
+            {
+                <tr>
+                    <td>@med.medicationName</td>
+                    <td>@med.flagRenal.ToString()</td>
+                    <td>@med.flagDialysis.ToString()</td>
+                    <td>@med.flagRenal.ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<p>@testvalue</p>
+
+@code {
+    public IEnumerable<MedicationItem> items;
+    public string medicationSelText = String.Empty;
+    public string testvalue = "function was NOT ran";
+
+    protected override Task OnInitializedAsync()
+    {
+        items = MedItemService.GetItems();
+        testvalue = "Items: ";
+
+        foreach(MedicationItem med in items)
+        {
+            testvalue += med.medicationName + ", ";
+        }
+
+        return base.OnInitializedAsync();
+    }
+}
+
+
+<!--MYSQL Connection
+    connection string: Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
+-->
