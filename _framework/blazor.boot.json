@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "MedRefWASM.dll": "sha256-71aueDBtslwXR9+sXpCcYEsEr8oPpjp+r6MUyOxohJU=",
+      "MedRefWASM.dll": "sha256-QHkbr5LsSkR3cQLTR4lrWuxWlHSR0YjC61jrP1CfLtk=",
       "Microsoft.AspNetCore.Components.dll": "sha256-iSo6G++1fmD3DWuHmNnqcAA+h8lnNrCpge\/DciosbF4=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-bxsed\/f9HGk8R07pPYy+tQtareorErblCp0tHBblkrE=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-GYLOrHTUilnmo\/diG\/ALfbWMvuvOGZ9MINsKLWtPjFc=",
